@@ -38,6 +38,7 @@ public class SqlA
     }
 
        System.out.println( "3.****************************" );
-	return;
+	System.exit(0);
+	//return;
   }
 }
