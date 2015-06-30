@@ -9,11 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
-
+	String msg = "Msg";
+ 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 
-		model.addAttribute("message", "Spring 3 MVC Hello World");
+		model.addAttribute("message", "Hello World Spring");
+		//modelview name is hello
 		return "hello";
 
 	}
@@ -21,9 +23,12 @@ public class HelloController {
 	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
 	public ModelAndView hello(@PathVariable("name") String name) {
 
-		ModelAndView model = new ModelAndView();
-		model.setViewName("hello");
-		model.addObject("msg", name);
+		ModelAndView model = new ModelAndView("hello");
+		//model.setViewName("hello");
+		model.addObject("msg", msg);
+		model.addObject("name", name);
+
+		System.out.println("name is "+name);
 
 		return model;
 

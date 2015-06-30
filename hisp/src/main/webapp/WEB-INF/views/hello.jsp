@@ -3,12 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Maven + Spring MVC</title>
+<title>${title}</title>
  
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
 </head>
  
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -31,51 +27,21 @@
 			Welcome Welcome!
 		</c:if>
     </p>
-    <p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-	</p>
 	</div>
 </div>
  
 <div class="container">
  
-  <div class="row">
-	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
-		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
-		</p>
-	</div>
-	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
-		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
-		</p>
-	</div>
-	<div class="col-md-4">
-		<h2>Heading</h2>
-		<p>ABC</p>
-		<p>
-			<a class="btn btn-default" href="#" role="button">View details</a>
-		</p>
-	</div>
-  </div>
- 
- 
   <hr>
   <footer>
-	<p>&copy; Mkyong.com 2015</p>
+	<p>&copy; i1602.com 2015</p>
   </footer>
 </div>
  
 <spring:url value="/resources/core/css/hello.js" var="coreJs" />
 <spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
  
-<script src="${coreJs}"></script>
-<script src="${bootstrapJs}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://zhanzhang.baidu.com/static/js/jquery-1.7.2.min.js" ></script>
  
 </body>
 </html>

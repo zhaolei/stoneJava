@@ -10,7 +10,7 @@
 <h2>Hello World</h2>
 <h2>
 <spring:url value="/resources/core/css/hello.css" var="name" />
-	${message} ${name}
+	${title} ${name}
 </h2>
 </center>
 </body>
