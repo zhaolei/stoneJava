@@ -7,3 +7,6 @@ mvn archetype:create -DgroupId=com.testweb -DartifactId=TestWebProject -Darchety
 
 Create Pro
 mvn archetype:create -DgroupId=com.test -DartifactId=TestProject
+
+Create struct2
+mvn archetype:generate -DgroupId={project-packaging} -DartifactId={project-name} -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false  
