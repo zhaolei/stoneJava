@@ -9,7 +9,7 @@ public class SqlA
     {
       String url="jdbc:mysql://localhost/blog";
       String user="root";
-      String pwd="329818";
+      String pwd="root";
       
       //加载驱动，这一句也可写为：Class.forName("com.mysql.jdbc.Driver");
      Class.forName("com.mysql.jdbc.Driver").newInstance();
