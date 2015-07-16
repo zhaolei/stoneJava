@@ -10,6 +10,7 @@ import org.stone.model.FileInfo;
 public class Response {
 
     private Integer statusCode = 200;
+    private String path;
 
     private List<FileInfo> files;
 
@@ -17,8 +18,16 @@ public class Response {
         return files;
     }
 
+    public String getPath() {
+        return path;
+    }
+
     public void setFiles(List<FileInfo> files) {
         this.files = files;
+    }
+
+    public void setPath(String path) {
+        this.path= path;
     }
 
     public Response(Integer statusCode) {

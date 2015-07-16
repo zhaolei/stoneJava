@@ -33,6 +33,7 @@ import org.stone.model.FileInfo;
 import org.stone.model.Response;
 
 @Controller
+@RequestMapping("/fs")
 public class WebHdfsController {
 	
 	private Log log = LogFactory.getLog(WebHdfsController.class);
@@ -46,6 +47,7 @@ public class WebHdfsController {
 	    log.info("########### WebHdfsController constructor ##########");
 
 		//String configFile = System.getProperty("config", "jetty.properties");
+		//String configFile = System.getProperty("user.dir") + "";
 		//System.getProperties().load(new FileInputStream(configFile));
 
 		//String hdfsHost = System.getProperty("hdfs.host");
@@ -76,6 +78,7 @@ public class WebHdfsController {
         this.hdfsService.listFiles(path, files, isRecursive);
 
         resp.setFiles(files);
+        resp.setPath(path);
 
         return resp;
 

@@ -2,6 +2,7 @@
 <%@ page session="false" %>
 <html>
 <head>
+    <meta charset="utf-8">
 	<title>simple-web-hdfs</title>
 </head>
 <body>
