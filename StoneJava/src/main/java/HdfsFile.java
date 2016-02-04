@@ -7,7 +7,11 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hdfs.DistributedFileSystem;
 import org.apache.hadoop.hdfs.protocol.DatanodeInfo;
+import org.apache.hadoop.mapred.JobClient; 
+import org.apache.hadoop.mapred.JobStatus; 
+import org.apache.hadoop.mapred.JobConf; 
 
+import java.io.IOException;
 
  
 
@@ -20,8 +24,10 @@ public class HdfsFile{
         hdfs=FileSystem.get(conf);
     }
     public static void main(String[] args) throws Exception {
+        System.out.println("当前程序所在目录：" + System.getProperty("user.dir")); 
         HdfsFile objHdfsFile = new HdfsFile();
-        objHdfsFile.listFile("/");
+        //objHdfsFile.listFile("/");
+        objHdfsFile.listJob();
 
         //本地文件
         //Path src =new Path("D:\\HebutWinOS");
@@ -35,6 +41,29 @@ public class HdfsFile{
             System.out.println(file.getPath());
         }
         */
+
+        /*
+        JobStatus[] js;
+        //JobClient jobclient = new JobClient();
+        JobConf cf = new JobConf(new Configuration());
+        JobClient jc = new JobClient(cf);
+        //js = JobClient.getAllJobs();
+        js = jc.getAllJobs();
+        for(int i=0; i<js.length; i++) {
+           System.out.println(js[i].getJobID()); 
+        }
+        */
+    }
+
+    public void listJob() throws IOException  {
+        JobStatus[] js;
+        //JobClient jobclient = new JobClient();
+        JobConf cf = new JobConf(new Configuration());
+        JobClient jc = new JobClient(cf);
+        js = jc.getAllJobs();
+        for(int i=0; i<js.length; i++) {
+           System.out.println(js[i].getJobID()); 
+        }
 
     }
 
